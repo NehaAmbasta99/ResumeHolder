@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { ProjectModalComponent } from './project-modal/project-modal.component';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppNavbarComponent
+    AppNavbarComponent,
+    ProjectModalComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AngularFireAuthModule,
     NgbModule.forRoot()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [NgbActiveModal],
+  bootstrap: [AppComponent],
+  entryComponents: [ProjectModalComponent]
 })
 export class AppModule { }

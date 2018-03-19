@@ -1,34 +1,85 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-navbar class="mb-5"></app-navbar>
+<div class="row text-white">
+<div class="col-4">
+<div class="card mt-2">
+    <div class="card-header bg-secondary text-white font-weight-bold">
+        Personal Information
+    </div>
+    <div class="card-content bg-primary">
+            <div class="ml-3" *ngFor="let user of userObservable | async">
+                <div class="" *ngIf="user.Name === 'Name'">
+                        <span>{{user.Name}}: </span>
+                        <span class="font-weight-bold">{{user.Value}}</span>
+                </div>
+                <div class="" *ngIf="user.Name === 'Contact'">
+                        <span>{{user.Name}}: </span>
+                        <span class="font-weight-bold">{{user.Value}}</span>
+                </div>
+                <div class="" *ngIf="user.Name === 'Email'">
+                        <span>{{user.Name}}: </span>
+                        <span class="font-weight-bold">{{user.Value}}</span>
+                </div>
+                <div class="" *ngIf="user.Name === 'Address'">
+                        <span>{{user.Name}}: </span>
+                        <span class="font-weight-bold">{{user.Value}}</span>
+                </div>
+                <div class="" *ngIf="user.Name === 'Experience'">
+                        <span>{{user.Name}}: </span>
+                        <span class="font-weight-bold">{{user.Value}}</span>
+                </div>
+                <div class="" *ngIf="user.Name === 'Company'">
+                        <span>{{user.Name}}: </span>
+                        <span class="font-weight-bold">{{user.Value}}</span>
+                </div> 
+            </div>
+    </div>
+</div>
 
-<ul class="mt-5">
-  <div class="mt-5" *ngFor="let skill of skillsObservable | async">
-      <ngb-alert type="info" [dismissible]="false">
-          <h3><a href="#">{{skill.Name}}</a> </h3>
-          <p>{{skill.Experience}}</p>
-      </ngb-alert> 
-  </div>
-</ul>
-<div class="card">
-  <div class="card-header">Education</div>
-  <div class="card-content">
-    <ul class="mt-5">
-      <div class="mt-5" *ngFor="let education of educationObservable | async">
-          <ngb-alert type="info" [dismissible]="false">
-              <h3><a href="#">{{education.Name}}</a> </h3>
-              <p>{{education.Value}}</p>
-          </ngb-alert> 
+<div class="card mt-5">
+    <div class="card-header bg-secondary text-white font-weight-bold">
+            Skills
+    </div>
+    <div class="card-content bg-success">
+            <div class="ml-3" *ngFor="let skill of skillsObservable | async">
+                    <div>
+                            <span>{{skill.Name}}: </span>
+                            <span class="font-weight-bold">{{skill.Experience}}</span>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<div class="card mt-5">
+  <div class="card-header bg-secondary text-white font-weight-bold">Education</div>
+  <div class="card-content bg-danger">
+      <div class="ml-3" *ngFor="let education of educationObservable | async">
+          <div>
+            <span>{{education.Name}}: </span>
+            <span class="font-weight-bold">{{education.Value}}</span>
+        </div>
       </div>
-      </ul>
     </div>
   </div>
-
-
-<ul class="mt-5">
-<div class="mt-5" *ngFor="let user of userObservable | async">
-    <ngb-alert type="info" [dismissible]="false">
-        <h3><a href="#">{{user.Name}}</a> </h3>
-        <p>{{user.Value}}</p>
-    </ngb-alert> 
 </div>
-</ul>
+<div class="col-8 mt-2">
+  <div class="card">
+      <div class="card-header bg-secondary text-white font-weight-bold">Projects</div>
+      <div class="card-content bg-warning">
+            <div class="ml-3" *ngFor="let project of projectsObservable | async">
+                    <div>
+                      <a class="text-primary" (click)="openProjectModal(project)">{{project.Name}}: </a>
+                      <span class="font-weight-bold">{{project.Duration}}</span>
+                      <p class="text-success">
+                          {{project.Description}}
+                      </p>
+                  </div>
+                </div>
+      </div>
+  </div>
+</div>
+</div>
+<div class="row mt-5">
+        <div #gmap style="width:100%;height:400px"></div>
+</div>
+
