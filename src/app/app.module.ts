@@ -10,6 +10,7 @@ import { AppNavbarComponent } from './app-navbar/app-navbar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { AngularFontAwesomeModule } from "angular-font-awesome";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    AngularFontAwesomeModule,
     NgbModule.forRoot()
   ],
   providers: [NgbActiveModal],

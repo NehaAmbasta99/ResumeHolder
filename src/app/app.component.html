@@ -1,62 +1,105 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-navbar class="mb-5"></app-navbar>
-<div class="row text-white">
+<div class="" id="homeBackgroundImage">
+        <div class="" id="homeImageSection">
+                <button type="button" class="btn btn-lg btn-outline-danger pull-right text-black" (click)="close()">
+                    Fullstack .Net Developer | 2years Experience | Angular Lover <span class="fa fa-paw"></span></button> 
+                </div>
+</div>
+<div class="row mt-5">
+    <div class="col-4 text-center btn-outline-light text-black">
+        <div><span class="fa fa-paw highlights"></span></div>
+        <div class="mt-2">
+                <button type="button" class="btn btn-lg btn-outline-danger text-black">
+                        Passion 
+                     </button> 
+        </div>
+        <div class="mt-2">
+             Blogging | Reading Anything Realistic | Sketching | Public Speaking | Managing Events
+        </div>
+    </div>
+    <div class="col-4 text-center btn-outline-light text-black">
+            <div><span class="fa fa-users highlights"></span></div>
+            <div class="mt-2">
+                    <button type="button" class="btn btn-lg btn-outline-danger text-black">
+                            Projects 
+                         </button> 
+            </div>
+            <div class="mt-2">
+                Learning makes sense when you implement it. I believe "It is better to wear out than rust out."
+            </div>
+        </div>
+        <div class="col-4 text-center btn-outline-light text-black">
+                <div><span class="fa fa-user highlights"></span></div>
+                <div class="mt-2">
+                    <button type="button" class="btn btn-lg btn-outline-danger text-black">
+                       About 
+                    </button> 
+                    </div>
+                    <div class="mt-2">
+                        Knowledge seeker | Developer | Dreamer 
+                    </div>
+            </div>
+</div>
+<div class="row">
 <div class="col-4">
 <div class="card mt-2">
-    <div class="card-header bg-secondary text-white font-weight-bold">
+    <div class="card-header bg-dark text-white font-weight-bold">
         Personal Information
     </div>
-    <div class="card-content bg-primary">
+    <div class="card-content">
             <div class="ml-3" *ngFor="let user of userObservable | async">
-                <div class="" *ngIf="user.Name === 'Name'">
-                        <span>{{user.Name}}: </span>
-                        <span class="font-weight-bold">{{user.Value}}</span>
+                <div class="row" *ngIf="user.Name === 'Name'">
+                        <div class="text-align-right col-4">{{user.Name}}: </div>
+                        <div class="font-weight-bold text-align-left col-8">{{user.Value}}</div>
                 </div>
-                <div class="" *ngIf="user.Name === 'Contact'">
-                        <span>{{user.Name}}: </span>
-                        <span class="font-weight-bold">{{user.Value}}</span>
+                <div class="row" *ngIf="user.Name === 'Contact'">
+                        <span class="text-align-right col-4">{{user.Name}}: </span>
+                        <span class="font-weight-bold text-align-left col-8">{{user.Value}}</span>
                 </div>
-                <div class="" *ngIf="user.Name === 'Email'">
-                        <span>{{user.Name}}: </span>
-                        <span class="font-weight-bold">{{user.Value}}</span>
+                <div class="row" *ngIf="user.Name === 'Email'">
+                        <span class="text-align-right col-4">{{user.Name}}: </span>
+                        <span class="font-weight-bold text-align-left col-8">{{user.Value}}</span>
                 </div>
-                <div class="" *ngIf="user.Name === 'Address'">
-                        <span>{{user.Name}}: </span>
-                        <span class="font-weight-bold">{{user.Value}}</span>
+                <div class="row" *ngIf="user.Name === 'Address'">
+                        <span class="text-align-right col-4">{{user.Name}}: </span>
+                        <span class="font-weight-bold text-align-left col-8">{{user.Value}}</span>
                 </div>
-                <div class="" *ngIf="user.Name === 'Experience'">
-                        <span>{{user.Name}}: </span>
-                        <span class="font-weight-bold">{{user.Value}}</span>
+                <div class="row" *ngIf="user.Name === 'Experience'">
+                        <span class="text-align-right col-4">{{user.Name}}: </span>
+                        <span class="font-weight-bold text-align-left col-8">{{user.Value}}</span>
                 </div>
-                <div class="" *ngIf="user.Name === 'Company'">
-                        <span>{{user.Name}}: </span>
-                        <span class="font-weight-bold">{{user.Value}}</span>
+                <div class="row" *ngIf="user.Name === 'Company'">
+                        <span class="text-align-right col-4">{{user.Name}}: </span>
+                        <span class="font-weight-bold text-align-left col-8">{{user.Value}}</span>
                 </div> 
             </div>
     </div>
 </div>
 
 <div class="card mt-5">
-    <div class="card-header bg-secondary text-white font-weight-bold">
+        <div class="card-header bg-dark text-white font-weight-bold">
             Skills
     </div>
-    <div class="card-content bg-success">
+    <div class="card-content">
             <div class="ml-3" *ngFor="let skill of skillsObservable | async">
-                    <div>
-                            <span>{{skill.Name}}: </span>
-                            <span class="font-weight-bold">{{skill.Experience}}</span>
+                    <div class="row">
+                            <span class="text-align-right col-4">{{skill.Name}}: </span>
+                            <span class="font-weight-bold text-align-left col-8">{{skill.Experience}}</span>
                     </div>
             </div>
     </div>
 </div>
 
 <div class="card mt-5">
-  <div class="card-header bg-secondary text-white font-weight-bold">Education</div>
-  <div class="card-content bg-danger">
+    <div class="card-header bg-dark text-white font-weight-bold">
+      Education
+    </div>
+  <div class="card-content">
       <div class="ml-3" *ngFor="let education of educationObservable | async">
-          <div>
-            <span>{{education.Name}}: </span>
-            <span class="font-weight-bold">{{education.Value}}</span>
+          <div class=row>
+                <span class="text-align-right col-4">{{education.Name}}: </span>
+            <span class="font-weight-bold text-align-left col-8">{{education.Value}}</span>
         </div>
       </div>
     </div>
@@ -64,8 +107,10 @@
 </div>
 <div class="col-8 mt-2">
   <div class="card">
-      <div class="card-header bg-secondary text-white font-weight-bold">Projects</div>
-      <div class="card-content bg-warning">
+        <div class="card-header bg-dark text-white font-weight-bold">
+          Projects
+        </div>
+      <div class="card-content">
             <div class="ml-3" *ngFor="let project of projectsObservable | async">
                     <div>
                       <a class="text-primary" (click)="openProjectModal(project)">{{project.Name}}: </a>

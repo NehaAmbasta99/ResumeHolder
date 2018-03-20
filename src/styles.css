@@ -2,3 +2,42 @@
 body{
     margin:70px!important;
 }
+
+body a{
+    cursor: pointer;
+}
+
+#homeImageSection {
+    position: absolute;    
+    width: 650px;
+    margin-left: -325px;
+    background: rgba(0,0,0,0.08);
+    padding: 20px;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-55%);
+    top: 47%;
+    left: 50%;
+}
+
+#homeBackgroundImage{
+    background-image: url(../src/Images/GDG.jpg);
+    width: 1192px;
+    height: 550px;
+    float: none;
+    list-style: none;
+    position: absolute;
+    z-index: 50;
+    display: block;
+    position: relative;
+    background-position: top center;
+    background-size: cover;
+}
+
+.highlights{
+    font-size: 80px;
+    color: rgb(160, 40, 40);
+    border-radius: 50%;
+    border: 2px solid grey;
+    padding: 36px;
+}
